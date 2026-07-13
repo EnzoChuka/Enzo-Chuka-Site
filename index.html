@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Enzo Chuka — Presença digital para pequenos negócios</title>
+<meta name="description" content="Seu negócio, levado a sério na internet. Sites e presença digital para pequenos negócios que querem passar confiança — e serem encontrados por quem procura.">
+<meta property="og:title" content="Enzo Chuka — Presença digital para pequenos negócios">
+<meta property="og:description" content="Sites e presença digital para pequenos negócios que querem passar confiança — e serem encontrados por quem procura.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta name="theme-color" content="#0A1F36">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Enzo Chuka — Presença digital",
+  "description": "Sites e presença digital para pequenos negócios: site rápido, Google configurado e marca coerente.",
+  "telephone": "+55-11-99246-5824",
+  "sameAs": ["https://instagram.com/enzochuka"],
+  "areaServed": "Brasil"
+}
+</script>
+
+<style>
+/* ═════════ Tokens ═════════ */
+:root{
+  --navy-deep:#0A1F36;
+  --navy:#0E2A47;
+  --blue:#1D6AE5;
+  --blue-soft:#6FA3F2;
+  --blue-bright:#2F7CF6;
+  --ink:#0E2A47;
+  --muted:#5A6B7F;
+  --ice-a:#FFFFFF;
+  --ice-b:#E4EDF8;
+  --ice-c:#F2F5F8;
+  --line-dark:rgba(255,255,255,.1);
+  --line-ink:rgba(14,42,71,.1);
+  --sans:'Inter',system-ui,-apple-system,sans-serif;
+  --head:'Archivo',system-ui,sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,Consolas,monospace;
+  --wrap:1280px;
+  --r:12px;
+}
+
+/* ═════════ Base ═════════ */
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px;overflow-x:clip}
+body{
+  background:var(--ice-c);color:var(--ink);
+  font-family:var(--sans);font-size:17px;line-height:1.6;
+  -webkit-font-smoothing:antialiased;overflow-x:clip;
+}
+img,video,canvas{max-width:100%;display:block}
+a{color:var(--blue);text-decoration:none}
+a:hover{color:var(--ink)}
+::selection{background:var(--blue);color:#fff}
+:focus-visible{outline:2px solid var(--blue-soft);outline-offset:3px;border-radius:6px}
+
+h1,h2,h3{font-family:var(--head);font-weight:700;letter-spacing:-0.02em}
+.wrap{max-width:var(--wrap);margin:0 auto;padding-left:40px;padding-right:40px}
+.eyebrow{font-family:var(--mono);font-size:15px;color:var(--blue);display:block;margin-bottom:20px}
+.dark .eyebrow{color:var(--blue-soft)}
+.h2{font-size:clamp(2.2rem,3.8vw,3.25rem);line-height:1.08;margin:0}
+
+.btn{
+  display:inline-flex;align-items:center;gap:10px;
+  background:var(--blue);color:#fff;
+  font-weight:600;font-size:16px;
+  padding:15px 28px;border-radius:var(--r);
+  border:none;cursor:pointer;font-family:var(--sans);
+  transition:transform .2s ease,box-shadow .2s ease;
+}
+.btn:hover{color:#fff;transform:translateY(-2px);box-shadow:0 10px 28px rgba(29,106,229,.45)}
+.btn--ghost{
+  background:transparent;border:1px solid rgba(255,255,255,.3);
+  transition:border-color .2s ease,background .2s ease;
+}
+.btn--ghost:hover{transform:none;box-shadow:none;border-color:rgba(255,255,255,.7);background:rgba(255,255,255,.06)}
+.btn--white{background:#fff;color:var(--blue)}
+.btn--white:hover{color:var(--navy);box-shadow:0 10px 28px rgba(0,0,0,.2)}
+
+.card{
+  background:#fff;border-radius:var(--r);
+  transition:transform .25s ease,box-shadow .25s ease;
+}
+.card:hover{transform:translateY(-6px);box-shadow:0 12px 32px rgba(14,42,71,.14)}
+
+/* ═════════ Nav ═════════ */
+.nav{
+  position:sticky;top:0;z-index:50;
+  background:rgba(10,31,54,.92);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.nav__in{
+  max-width:var(--wrap);margin:0 auto;padding:16px 40px;
+  display:flex;align-items:center;justify-content:space-between;gap:24px;
+}
+.brand{display:flex;align-items:baseline;gap:12px}
+.brand__mono{font-family:var(--mono);font-size:17px;color:var(--blue-soft);white-space:nowrap}
+.brand__name{font-family:var(--head);font-weight:700;font-size:18px;letter-spacing:-0.02em;color:#fff;white-space:nowrap}
+.nav__links{display:flex;align-items:center;gap:clamp(14px,2.2vw,30px);font-size:clamp(13px,1.5vw,15px);font-weight:500}
+.nav__links>a{color:rgba(255,255,255,.65);white-space:nowrap;transition:color .2s ease}
+.nav__links>a:hover{color:#fff}
+.nav__links .btn{padding:11px clamp(14px,1.8vw,24px);font-size:inherit}
+
+/* ═════════ Hero ═════════ */
+.hero{
+  background:var(--navy-deep);color:#fff;
+  position:relative;overflow:hidden;
+  min-height:100svh;display:flex;flex-direction:column;justify-content:center;
+}
+.hero__grid{
+  max-width:var(--wrap);margin:0 auto;width:100%;
+  padding:90px 40px 0;flex:1;
+  display:grid;grid-template-columns:1.05fr auto .75fr;gap:56px;
+  align-items:center;
+}
+.hero__left{padding-bottom:90px}
+.hero__bar{width:56px;height:5px;background:var(--blue);border-radius:3px;margin-bottom:28px}
+.hero h1{font-size:clamp(2.8rem,4.6vw,4.2rem);line-height:1.05;margin:0 0 24px}
+.hero__sub{font-size:19px;line-height:1.6;color:rgba(255,255,255,.75);max-width:420px;margin:0 0 40px}
+.hero__cta{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.hero__down{
+  width:60px;height:60px;border-radius:50%;flex-shrink:0;
+  background:var(--blue);color:#fff;
+  display:flex;align-items:center;justify-content:center;font-size:22px;
+  animation:ec-bounce 2.2s ease-in-out infinite;
+  transition:box-shadow .2s ease;
+}
+.hero__down:hover{color:#fff;box-shadow:0 10px 28px rgba(29,106,229,.5)}
+@keyframes ec-bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
+
+/* vídeo central — fundo preto some no navy via blend; brilho azul por baixo */
+.hero__media{align-self:end;display:flex;justify-content:center;position:relative}
+.hero__vwrap{position:relative;width:min(520px,42vw)}
+.hero__vwrap::before{
+  content:"";position:absolute;inset:-20px -60px -80px -60px;
+  background:radial-gradient(ellipse at 50% 82%,rgba(47,124,246,.5),rgba(29,106,229,.22) 45%,transparent 72%);
+  pointer-events:none;
+}
+.hero__vwrap video{
+  width:100%;height:auto;position:relative;
+  mix-blend-mode:screen;
+}
+.hero__side{display:flex;flex-direction:column;gap:36px;padding-bottom:90px}
+.hero__note .eyebrow{font-size:13px;margin-bottom:12px}
+.hero__note p{font-size:15px;line-height:1.6;color:rgba(255,255,255,.7);margin:0 0 12px}
+.hero__note a{
+  font-size:14px;font-weight:600;color:#fff;
+  border-bottom:1px solid var(--blue);padding-bottom:2px;
+}
+.hero__note a:hover{color:var(--blue-soft)}
+
+/* marquee */
+.marquee{
+  border-top:1px solid var(--line-dark);
+  overflow:hidden;padding:16px 0;background:rgba(255,255,255,.02);
+}
+.marquee__track{display:flex;width:max-content;animation:ec-marquee 30s linear infinite}
+.marquee__set{
+  display:flex;gap:60px;padding-right:60px;
+  font-family:var(--mono);font-size:14px;color:rgba(255,255,255,.45);white-space:nowrap;
+}
+@keyframes ec-marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ═════════ Seções ═════════ */
+.sec{padding:120px 0}
+.sec--marca{background:radial-gradient(62% 52% at 88% 4%,rgba(29,106,229,.26),transparent 72%),linear-gradient(180deg,#FFFFFF 0%,#E4EDF8 100%)}
+.sec--serv{background:radial-gradient(55% 48% at 84% 2%,rgba(47,124,246,.34),transparent 72%),radial-gradient(50% 44% at 4% 98%,rgba(29,106,229,.28),transparent 72%),var(--navy);color:#fff}
+.sec--porque{background:radial-gradient(54% 48% at 8% 10%,rgba(111,163,242,.34),transparent 72%),radial-gradient(48% 42% at 96% 92%,rgba(29,106,229,.22),transparent 72%),linear-gradient(180deg,#FFFFFF 0%,#E4EDF8 100%)}
+.sec--proc{background:radial-gradient(68% 52% at 50% -4%,rgba(47,124,246,.32),transparent 72%),linear-gradient(160deg,#E4EDF8 0%,#F2F5F8 100%)}
+.sec--prova{background:radial-gradient(60% 50% at 12% 0%,rgba(47,124,246,.3),transparent 70%),var(--navy-deep);color:#fff}
+.sec--faq{background:radial-gradient(52% 46% at 92% 6%,rgba(29,106,229,.22),transparent 72%),linear-gradient(180deg,#E4EDF8 0%,#F2F5F8 100%);border-top:1px solid var(--line-ink)}
+.sec--contato{background:var(--navy-deep);color:#fff;padding-bottom:0}
+
+.sec__head{
+  display:flex;align-items:flex-end;justify-content:space-between;
+  gap:32px;flex-wrap:wrap;margin-bottom:64px;
+}
+.sec__lead{font-size:17px;line-height:1.6;color:var(--muted);max-width:400px;margin:0}
+.dark .sec__lead{color:rgba(255,255,255,.65)}
+
+/* ═════════ A marca ═════════ */
+.marca__top{display:grid;grid-template-columns:1fr 1fr;gap:80px;margin-bottom:72px}
+.marca__top p{font-size:19px;line-height:1.65;color:var(--muted);margin:0 0 18px}
+.marca__top p:last-child{margin-bottom:0}
+.marca__intro{align-self:end}
+.marca__cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.marca__card{border:1px solid rgba(14,42,71,.06);padding:40px 34px}
+.marca__card .eyebrow{font-size:14px;margin-bottom:16px}
+.marca__card p{font-size:17px;line-height:1.6;margin:0;font-weight:500}
+.marca__card--hl{
+  background:linear-gradient(150deg,#1D6AE5 0%,#0E2A47 100%);
+  border:1px solid rgba(29,106,229,.4);
+  box-shadow:0 14px 34px rgba(29,106,229,.32);
+}
+.marca__card--hl:hover{box-shadow:0 18px 40px rgba(29,106,229,.42)}
+.marca__card--hl .eyebrow{color:var(--blue-soft)}
+.marca__card--hl p{color:#fff}
+
+/* ═════════ Serviços ═════════ */
+.serv__grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.serv__card{padding:44px 40px}
+.serv__card:hover{box-shadow:0 12px 32px rgba(0,0,0,.35)}
+.serv__top{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin-bottom:20px}
+.serv__top h3{font-size:26px;margin:0;color:var(--navy)}
+.serv__num{font-family:var(--mono);font-size:15px;color:var(--blue);flex-shrink:0}
+.serv__card>p{font-size:17px;line-height:1.6;color:var(--muted);margin:0 0 26px}
+.serv__list{
+  display:flex;flex-direction:column;gap:10px;
+  border-top:1px solid rgba(14,42,71,.08);padding-top:24px;
+}
+.serv__item{display:flex;align-items:baseline;gap:12px}
+.serv__item span:first-child{font-family:var(--mono);font-size:13px;color:var(--blue)}
+.serv__item span:last-child{font-size:15px;line-height:1.5;color:var(--navy)}
+
+/* ═════════ Por que fechar comigo ═════════ */
+.porque__grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:80px;align-items:start}
+.porque__sticky{position:sticky;top:110px}
+.porque__sticky p{font-size:19px;line-height:1.65;color:var(--muted);max-width:400px;margin:24px 0 0}
+.comp{
+  display:grid;grid-template-columns:84px 1fr;gap:24px;
+  padding:36px 0;border-bottom:1px solid var(--line-ink);
+}
+.comp__num{
+  font-family:var(--mono);font-size:13px;color:var(--blue);
+  display:inline-flex;align-items:center;justify-content:center;white-space:nowrap;
+  height:40px;padding:0 12px;align-self:start;
+  background:rgba(29,106,229,.12);border:1px solid rgba(29,106,229,.25);border-radius:var(--r);
+}
+.comp h3{font-size:24px;margin:0 0 10px;color:var(--navy)}
+.comp p{font-size:17px;line-height:1.6;color:var(--muted);margin:0;max-width:480px}
+
+/* ═════════ Processo ═════════ */
+.proc__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.proc__card{
+  border-top:3px solid var(--blue);padding:33px 30px 36px;
+  box-shadow:0 8px 24px rgba(14,42,71,.06);
+}
+.proc__num{
+  font-family:var(--head);font-weight:700;font-size:44px;letter-spacing:-0.02em;
+  color:rgba(29,106,229,.22);line-height:1;margin-bottom:22px;
+}
+.proc__card h3{font-size:20px;letter-spacing:-0.01em;margin:0 0 10px;color:var(--navy)}
+.proc__card p{font-size:15px;line-height:1.6;color:var(--muted);margin:0}
+
+/* ═════════ A prova (antes/depois no Google) ═════════ */
+.prova__grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:80px;align-items:start}
+.prova__sticky{position:sticky;top:110px}
+.prova__sticky .sec__lead{max-width:420px;margin-top:24px}
+.prova__note{
+  font-family:var(--mono);font-size:12.5px;color:rgba(255,255,255,.5);
+  margin-top:26px;line-height:1.7;max-width:420px;
+}
+.prova__cta{margin-top:34px}
+.prova__stage{max-width:480px;justify-self:center;width:100%}
+
+.toggle{
+  position:relative;display:grid;grid-template-columns:1fr 1fr;
+  background:rgba(255,255,255,.08);border:1px solid var(--line-dark);
+  border-radius:999px;padding:5px;margin-bottom:26px;
+}
+.toggle::before{
+  content:"";position:absolute;top:5px;bottom:5px;left:5px;
+  width:calc(50% - 5px);background:#fff;border-radius:999px;
+  transition:transform .35s cubic-bezier(.22,1,.36,1);
+}
+.toggle[data-state="after"]::before{transform:translateX(100%)}
+.toggle button{
+  position:relative;z-index:1;background:none;border:none;cursor:pointer;
+  font-family:var(--sans);font-weight:600;font-size:15px;
+  padding:12px 8px;border-radius:999px;
+  color:rgba(255,255,255,.78);transition:color .25s ease;
+}
+.toggle button[aria-pressed="true"]{color:var(--navy)}
+
+.prova__stack{display:grid}
+.prova__stack>*{grid-area:1/1}
+.gc{
+  transition:opacity .4s ease,transform .4s ease,visibility 0s linear .4s;
+  opacity:0;transform:translateY(8px);visibility:hidden;
+}
+.prova__stack[data-show="before"] .gc--before,
+.prova__stack[data-show="after"] .gc--after{
+  opacity:1;transform:none;visibility:visible;transition-delay:0s;
+}
+.gc__search{
+  display:flex;align-items:center;gap:12px;
+  background:#fff;border-radius:999px;padding:13px 20px;margin-bottom:14px;
+  color:#3a4653;font-size:15px;box-shadow:0 4px 14px rgba(0,0,0,.22);
+}
+.gc__search svg{flex-shrink:0;opacity:.55}
+.gc__card{
+  background:#fff;border-radius:18px;padding:22px;color:#1d2b3a;
+  box-shadow:0 18px 44px rgba(0,0,0,.32);
+}
+.gc__top{display:flex;gap:14px;align-items:center;margin-bottom:14px}
+.gc__avatar{
+  width:56px;height:56px;border-radius:14px;flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;font-size:26px;
+}
+.gc--before .gc__avatar{background:#E5E7EA;color:#9AA4AE;font-family:var(--head);font-weight:600;font-size:22px}
+.gc--after .gc__avatar{background:linear-gradient(140deg,#F7C873,#E58A3A)}
+.gc__name{font-weight:600;font-size:18px;letter-spacing:-0.01em;line-height:1.25}
+.gc--before .gc__name{color:#5c6873;font-weight:500}
+.gc__meta{font-size:13.5px;color:#5c6873;margin-top:3px}
+.gc__stars{color:#F2A93B;letter-spacing:1px}
+.gc--before .gc__stars{color:#c3c9cf}
+.gc__status{font-size:13.5px;margin-bottom:14px}
+.gc__status--ok{color:#1a7f37;font-weight:500}
+.gc__status--bad{color:#a05b16}
+.gc__actions{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+.gc__chip{
+  font-size:13.5px;font-weight:500;border:1px solid #d7dde3;
+  border-radius:999px;padding:7px 14px;color:var(--blue);
+}
+.gc__chip--off{color:#9AA4AE;border-style:dashed}
+.gc__photos{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:16px}
+.gc__ph{aspect-ratio:4/3;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:24px}
+.gc__ph--1{background:linear-gradient(140deg,#F4D9A8,#DFA35C)}
+.gc__ph--2{background:linear-gradient(140deg,#F2C1CB,#D98795)}
+.gc__ph--3{background:linear-gradient(140deg,#C9DCC8,#8FB08D)}
+.gc__nophoto{
+  border:1.5px dashed #d7dde3;border-radius:10px;padding:18px;text-align:center;
+  font-size:13.5px;color:#9AA4AE;margin-bottom:16px;
+}
+.gc__review{border-top:1px solid #edf0f3;padding-top:14px;font-size:14px;color:#5c6873;line-height:1.5}
+.gc__review strong{color:#1d2b3a;font-weight:600}
+
+/* ═════════ Banner primeiros ═════════ */
+.banner{
+  background:var(--blue);border-radius:var(--r);
+  padding:44px 48px;margin-top:96px;
+  display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap;
+  box-shadow:0 12px 32px rgba(29,106,229,.3);
+}
+.banner h3{font-size:26px;color:#fff;margin:0 0 8px}
+.banner p{font-size:17px;color:rgba(255,255,255,.85);margin:0;max-width:520px}
+
+/* ═════════ FAQ ═════════ */
+.faq__grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:80px;align-items:start}
+.faq__sticky{position:sticky;top:110px}
+.faq__sticky p{font-size:17px;line-height:1.6;color:var(--muted);max-width:380px;margin:24px 0 0}
+.faq__list{display:flex;flex-direction:column;gap:12px}
+.faq__item{background:var(--ice-c);border:1px solid rgba(14,42,71,.08);border-radius:var(--r);overflow:hidden}
+.faq__q{
+  all:unset;box-sizing:border-box;cursor:pointer;
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+  width:100%;padding:24px 28px;
+}
+.faq__q:focus-visible{outline:2px solid var(--blue);outline-offset:-2px}
+.faq__q span:first-child{font-family:var(--head);font-weight:600;font-size:18px;color:var(--navy);letter-spacing:-0.01em}
+.faq__q span:last-child{
+  font-family:var(--mono);font-size:18px;color:var(--blue);
+  transition:transform .35s ease;flex-shrink:0;
+}
+.faq__item.open .faq__q span:last-child{transform:rotate(45deg)}
+.faq__a{display:grid;grid-template-rows:0fr;transition:grid-template-rows .4s ease}
+.faq__item.open .faq__a{grid-template-rows:1fr}
+.faq__a>div{min-height:0;overflow:hidden}
+.faq__a p{font-size:16px;line-height:1.65;color:var(--muted);margin:0;padding:0 28px 26px}
+
+/* ═════════ Contato ═════════ */
+.contato__grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;
+  padding-bottom:100px;
+}
+.contato__grid h2{color:#fff;font-size:clamp(2.4rem,4.2vw,3.75rem);line-height:1.05;margin:0 0 24px}
+.contato__sub{font-size:19px;line-height:1.65;color:rgba(255,255,255,.75);max-width:440px;margin:0 0 44px}
+.contato__btns{display:flex;gap:14px;flex-wrap:wrap}
+.form{
+  background:#fff;border-radius:var(--r);padding:44px 40px;
+  box-shadow:0 8px 24px rgba(0,0,0,.25);
+}
+.form__title{font-family:var(--head);font-weight:700;font-size:22px;color:var(--navy);letter-spacing:-0.02em;margin-bottom:18px}
+.form label{
+  display:flex;flex-direction:column;gap:8px;
+  font-size:14px;font-weight:500;color:var(--navy);margin-bottom:18px;
+}
+.form input,.form textarea{
+  font-family:var(--sans);font-size:16px;color:var(--navy);
+  background:var(--ice-c);border:1px solid rgba(14,42,71,.12);
+  border-radius:var(--r);padding:13px 16px;outline:none;
+  transition:border-color .2s ease;resize:vertical;
+}
+.form input:focus,.form textarea:focus{border-color:var(--blue)}
+.form .btn{width:100%;justify-content:center}
+.form__ok{text-align:center;padding:48px 0;display:none}
+.form__ok h3{font-size:26px;color:var(--navy);margin-bottom:12px}
+.form__ok p{font-size:16px;color:var(--muted);margin:0}
+.form.sent form{display:none}
+.form.sent .form__ok{display:block}
+
+.footer{border-top:1px solid var(--line-dark)}
+.footer__in{
+  max-width:var(--wrap);margin:0 auto;padding:28px 40px;
+  display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;
+}
+.footer__in span:first-child{font-family:var(--mono);font-size:14px;color:rgba(255,255,255,.4)}
+.footer__in span:last-child{font-size:14px;color:rgba(255,255,255,.4)}
+.footer__bar{height:4px;background:var(--blue)}
+
+/* ═════════ Reveals ═════════ */
+@media (prefers-reduced-motion:no-preference){
+  html.js [data-reveal]{
+    opacity:0;transform:translateY(28px);
+    transition:opacity .8s ease,transform .8s cubic-bezier(.22,1,.36,1);
+    transition-delay:calc((var(--d,1) - 1)*120ms);
+  }
+  html.js [data-reveal].is-in{opacity:1;transform:none}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .marquee__track{animation:none}
+  .hero__down{animation:none}
+  .toggle::before,.gc,.faq__a{transition:none}
+}
+
+/* ═════════ Celular ═════════ */
+@media (max-width:1080px){
+  .hero__grid{grid-template-columns:1fr;gap:8px;padding-top:64px}
+  .hero{min-height:0}
+  .hero__left{padding-bottom:0}
+  .hero__media{order:2;margin-top:12px}
+  .hero__vwrap{width:min(420px,86vw)}
+  .hero__side{order:3;padding:36px 0 56px;gap:28px}
+  .porque__grid,.faq__grid,.prova__grid,.contato__grid,.marca__top{grid-template-columns:1fr;gap:40px}
+  .porque__sticky,.faq__sticky,.prova__sticky{position:static;top:auto}
+  .serv__grid{grid-template-columns:1fr}
+  .marca__cards{grid-template-columns:1fr}
+  .proc__grid{grid-template-columns:1fr 1fr}
+  .prova__stage{justify-self:start}
+}
+@media (max-width:900px){
+  .nav__links>a:not(.btn){display:none}
+  .wrap{padding-left:22px;padding-right:22px}
+  .nav__in{padding:14px 20px}
+  .sec{padding:80px 0}
+  .hero__grid{padding-left:22px;padding-right:22px}
+  .footer__in{padding:24px 22px}
+}
+@media (max-width:640px){
+  .proc__grid{grid-template-columns:1fr}
+  .comp{grid-template-columns:1fr;gap:14px}
+  .banner{padding:36px 28px}
+  .form{padding:32px 24px}
+  .contato__grid{padding-bottom:72px}
+}
+@media (max-width:420px){
+  .nav-hide-sm{display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- ══════════ NAV ══════════ -->
+<nav class="nav" aria-label="Principal">
+  <div class="nav__in">
+    <a class="brand" href="#topo">
+      <span class="brand__mono">{ ec }</span>
+      <span class="brand__name">Enzo Chuka</span>
+    </a>
+    <div class="nav__links">
+      <a href="#marca">A marca</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#processo">Como funciona</a>
+      <a href="#prova">A prova</a>
+      <a href="#duvidas">Dúvidas</a>
+      <a class="btn" href="#contato"><span class="nav-hide-sm">Vamos&nbsp;</span>conversar</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ══════════ HERO ══════════ -->
+<header class="hero dark" id="topo">
+  <div class="hero__grid">
+    <div class="hero__left">
+      <div class="hero__bar" data-reveal style="--d:1"></div>
+      <h1 data-reveal style="--d:2">Seu negócio, levado a sério na internet.</h1>
+      <p class="hero__sub" data-reveal style="--d:3">Sites e presença digital para pequenos negócios que querem passar confiança — e serem encontrados por quem procura.</p>
+      <div class="hero__cta" data-reveal style="--d:4">
+        <a href="#marca" class="hero__down" aria-label="Rolar para a próxima seção">↓</a>
+        <a href="#contato" class="btn btn--ghost" style="color:#fff">Começar um projeto</a>
+      </div>
+    </div>
+
+    <div class="hero__media" data-reveal style="--d:3">
+      <div class="hero__vwrap">
+        <video src="assets/enzo-video.mp4" autoplay muted playsinline preload="auto" aria-hidden="true"></video>
+      </div>
+    </div>
+
+    <div class="hero__side">
+      <div class="hero__note" data-reveal style="--d:4">
+        <span class="eyebrow">{ sobre mim }</span>
+        <p>Construo a presença digital de quem é bom no que faz mas ainda está invisível na internet.</p>
+        <a href="#marca">saiba mais →</a>
+      </div>
+      <div class="hero__note" data-reveal style="--d:5">
+        <span class="eyebrow">{ meu trabalho }</span>
+        <p>Site, Google e identidade organizada — as três frentes que fazem o cliente confiar e escolher você.</p>
+        <a href="#servicos">ver serviços →</a>
+      </div>
+      <div class="hero__note" data-reveal style="--d:6">
+        <span class="eyebrow">{ me siga }</span>
+        <p style="margin:0"><a href="https://instagram.com/enzochuka" target="_blank" rel="noopener" style="font-size:15px">@enzochuka</a></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <div class="marquee__set">
+        <span>{ site }</span><span>{ google }</span><span>{ identidade }</span><span>{ presença digital }</span><span>{ pequenos negócios }</span><span>{ site }</span><span>{ google }</span><span>{ identidade }</span><span>{ presença digital }</span><span>{ pequenos negócios }</span>
+      </div>
+      <div class="marquee__set">
+        <span>{ site }</span><span>{ google }</span><span>{ identidade }</span><span>{ presença digital }</span><span>{ pequenos negócios }</span><span>{ site }</span><span>{ google }</span><span>{ identidade }</span><span>{ presença digital }</span><span>{ pequenos negócios }</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ══════════ A MARCA ══════════ -->
+<section class="sec sec--marca" id="marca" aria-labelledby="marca-titulo">
+  <div class="wrap">
+    <div class="marca__top">
+      <div>
+        <span class="eyebrow" data-reveal style="--d:1">{ a marca }</span>
+        <h2 class="h2" id="marca-titulo" data-reveal style="--d:2">Todo negócio bom merece ser <span style="color:var(--blue)">encontrado.</span></h2>
+      </div>
+      <div class="marca__intro">
+        <p data-reveal style="--d:3">Muita gente boa no que faz continua invisível na internet — ou aparece de um jeito que não passa confiança. Antes de comprar, as pessoas pesquisam. O que elas encontram decide se ligam para você ou para o concorrente.</p>
+        <p data-reveal style="--d:4">Meu trabalho é fazer essa primeira impressão jogar a seu favor: uma presença online clara, organizada e profissional.</p>
+      </div>
+    </div>
+    <div class="marca__cards">
+      <div class="card marca__card" data-reveal style="--d:1">
+        <span class="eyebrow">{ confiável }</span>
+        <p>Você sabe o que vai receber, quanto custa e quando fica pronto. Sem surpresa no meio do caminho.</p>
+      </div>
+      <div class="card marca__card marca__card--hl" data-reveal style="--d:2">
+        <span class="eyebrow">{ organizado }</span>
+        <p>Sua marca com a mesma cara em todo lugar: site, Google e redes. Tudo alinhado, nada solto.</p>
+      </div>
+      <div class="card marca__card" data-reveal style="--d:3">
+        <span class="eyebrow">{ profissional }</span>
+        <p>Design limpo e direto, que transmite a seriedade que o seu trabalho merece.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ SERVIÇOS ══════════ -->
+<section class="sec sec--serv dark" id="servicos" aria-labelledby="serv-titulo">
+  <div class="wrap">
+    <span class="eyebrow" data-reveal style="--d:1">{ serviços }</span>
+    <div class="sec__head">
+      <h2 class="h2" id="serv-titulo" data-reveal style="color:#fff;--d:2">O que eu faço<br>por você</h2>
+      <p class="sec__lead" data-reveal style="--d:3">Quatro frentes que, juntas, colocam o seu negócio no mapa — e mantêm ele lá.</p>
+    </div>
+    <div class="serv__grid">
+      <div class="card serv__card" data-reveal style="--d:1">
+        <div class="serv__top"><h3>Um site que passa confiança</h3><span class="serv__num">{ 01 }</span></div>
+        <p>Rápido, bonito no celular e fácil de usar. A vitrine do seu negócio aberta 24 horas por dia.</p>
+        <div class="serv__list">
+          <div class="serv__item"><span>→</span><span>Páginas essenciais do seu negócio</span></div>
+          <div class="serv__item"><span>→</span><span>Visual alinhado à sua marca</span></div>
+          <div class="serv__item"><span>→</span><span>Perfeito no celular e no computador</span></div>
+        </div>
+      </div>
+      <div class="card serv__card" data-reveal style="--d:2">
+        <div class="serv__top"><h3>Ser achado no Google</h3><span class="serv__num">{ 02 }</span></div>
+        <p>Aparecer quando procurarem o seu serviço — na hora em que o cliente está decidindo.</p>
+        <div class="serv__list">
+          <div class="serv__item"><span>→</span><span>Site preparado para o Google</span></div>
+          <div class="serv__item"><span>→</span><span>Perfil do negócio configurado</span></div>
+          <div class="serv__item"><span>→</span><span>Orientação para se manter visível</span></div>
+        </div>
+      </div>
+      <div class="card serv__card" data-reveal style="--d:3">
+        <div class="serv__top"><h3>Uma presença organizada</h3><span class="serv__num">{ 03 }</span></div>
+        <p>Sua marca com a mesma cara em todo lugar. Coerência é o que constrói confiança.</p>
+        <div class="serv__list">
+          <div class="serv__item"><span>→</span><span>Identidade visual consistente</span></div>
+          <div class="serv__item"><span>→</span><span>Site, Google e redes alinhados</span></div>
+          <div class="serv__item"><span>→</span><span>Materiais prontos para usar</span></div>
+        </div>
+      </div>
+      <div class="card serv__card" data-reveal style="--d:4">
+        <div class="serv__top"><h3>Acompanhamento de perto</h3><span class="serv__num">{ 04 }</span></div>
+        <p>Conversa direta, sem termos complicados. Você fala comigo, não com um atendimento.</p>
+        <div class="serv__list">
+          <div class="serv__item"><span>→</span><span>Canal direto durante o projeto</span></div>
+          <div class="serv__item"><span>→</span><span>Ajustes e atualizações depois do ar</span></div>
+          <div class="serv__item"><span>→</span><span>Suporte em português claro</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ POR QUE FECHAR COMIGO ══════════ -->
+<section class="sec sec--porque" id="porque" aria-labelledby="porque-titulo">
+  <div class="wrap porque__grid">
+    <div class="porque__sticky">
+      <span class="eyebrow" data-reveal style="--d:1">{ compromissos }</span>
+      <h2 class="h2" id="porque-titulo" data-reveal style="--d:2">Por que fechar comigo</h2>
+      <p data-reveal style="--d:3">Não é só um site. É um jeito de trabalhar: claro do primeiro contato ao pós-lançamento.</p>
+    </div>
+    <div>
+      <div class="comp" data-reveal style="--d:1">
+        <span class="comp__num">{ 01 }</span>
+        <div>
+          <h3>Proposta clara, valor fechado</h3>
+          <p>Você sabe exatamente o que está contratando e quanto vai pagar. Nada de surpresa na fatura.</p>
+        </div>
+      </div>
+      <div class="comp" data-reveal style="--d:2">
+        <span class="comp__num">{ 02 }</span>
+        <div>
+          <h3>Prazo combinado é prazo cumprido</h3>
+          <p>Antes de começar, a gente define uma data. Essa data é compromisso, não estimativa.</p>
+        </div>
+      </div>
+      <div class="comp" data-reveal style="--d:3">
+        <span class="comp__num">{ 03 }</span>
+        <div>
+          <h3>Português claro, sempre</h3>
+          <p>Nenhum termo técnico no meio do caminho. Você entende cada decisão do projeto.</p>
+        </div>
+      </div>
+      <div class="comp" data-reveal style="--d:4">
+        <span class="comp__num">{ 04 }</span>
+        <div>
+          <h3>O lançamento não é o fim</h3>
+          <p>Site no ar é o começo. Eu continuo por perto para o seu negócio seguir crescendo.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ COMO FUNCIONA ══════════ -->
+<section class="sec sec--proc" id="processo" aria-labelledby="proc-titulo">
+  <div class="wrap">
+    <span class="eyebrow" data-reveal style="--d:1">{ como funciona }</span>
+    <div class="sec__head">
+      <h2 class="h2" id="proc-titulo" data-reveal style="--d:2">Do primeiro contato<br>ao site no ar</h2>
+      <p class="sec__lead" data-reveal style="--d:3">Um processo simples, com você no controle em cada etapa.</p>
+    </div>
+    <div class="proc__grid">
+      <div class="card proc__card" data-reveal style="--d:1">
+        <div class="proc__num">01</div>
+        <h3>Conversa</h3>
+        <p>Você me conta do seu negócio. Sem compromisso e sem jargão.</p>
+      </div>
+      <div class="card proc__card" data-reveal style="--d:2">
+        <div class="proc__num">02</div>
+        <h3>Proposta</h3>
+        <p>Escopo, valor fechado e prazo definido. Tudo por escrito.</p>
+      </div>
+      <div class="card proc__card" data-reveal style="--d:3">
+        <div class="proc__num">03</div>
+        <h3>Construção</h3>
+        <p>Eu construo, você acompanha e aprova cada etapa.</p>
+      </div>
+      <div class="card proc__card" data-reveal style="--d:4">
+        <div class="proc__num">04</div>
+        <h3>Lançamento</h3>
+        <p>Site no ar, Google configurado — e eu por perto depois.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ A PROVA ══════════ -->
+<section class="sec sec--prova dark" id="prova" aria-labelledby="prova-titulo">
+  <div class="wrap">
+    <div class="prova__grid">
+      <div class="prova__sticky">
+        <span class="eyebrow" data-reveal style="--d:1">{ a prova }</span>
+        <h2 class="h2" id="prova-titulo" data-reveal style="color:#fff;--d:2">A diferença entre estar na internet e ter presença.</h2>
+        <p class="sec__lead" data-reveal style="--d:3">É assim que um cliente encontra uma padaria no Google. Toque para comparar — de que lado o seu negócio está hoje?</p>
+        <p class="prova__note" data-reveal style="--d:4">Simulação ilustrativa. Esse conjunto — perfil completo, avaliações, site e WhatsApp — é exatamente o que eu monto para o seu negócio.</p>
+        <div class="prova__cta" data-reveal style="--d:5">
+          <a class="btn" href="https://wa.me/5511992465824?text=Ol%C3%A1%2C%20Enzo!%20Quero%20que%20meu%20neg%C3%B3cio%20apare%C3%A7a%20assim%20no%20Google." target="_blank" rel="noopener">Quero aparecer assim</a>
+        </div>
+      </div>
+
+      <div class="prova__stage" data-reveal style="--d:2">
+        <div class="toggle" data-state="before" role="group" aria-label="Comparar presença digital">
+          <button type="button" id="btn-before" aria-pressed="true">Como está hoje</button>
+          <button type="button" id="btn-after" aria-pressed="false">Como pode ficar</button>
+        </div>
+
+        <div class="prova__stack" data-show="before" id="prova-stack">
+          <!-- ANTES -->
+          <div class="gc gc--before" id="gc-before">
+            <div class="gc__search">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.8-3.8"/></svg>
+              padaria perto de mim
+            </div>
+            <div class="gc__card">
+              <div class="gc__top">
+                <div class="gc__avatar">P</div>
+                <div>
+                  <div class="gc__name">padaria pão quente</div>
+                  <div class="gc__meta"><span class="gc__stars">★★★☆☆</span> 3,1 · 2 avaliações</div>
+                </div>
+              </div>
+              <p class="gc__status gc__status--bad">Horário não informado · Endereço pode estar desatualizado</p>
+              <div class="gc__actions">
+                <span class="gc__chip">Ligar</span>
+                <span class="gc__chip gc__chip--off">Site — não informado</span>
+              </div>
+              <div class="gc__nophoto">Este negócio ainda não tem fotos</div>
+              <p class="gc__review">“Não consegui saber se estava aberto…” <strong>— avaliação de 2 anos atrás</strong></p>
+            </div>
+          </div>
+
+          <!-- DEPOIS -->
+          <div class="gc gc--after" id="gc-after" aria-hidden="true">
+            <div class="gc__search">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.8-3.8"/></svg>
+              padaria perto de mim
+            </div>
+            <div class="gc__card">
+              <div class="gc__top">
+                <div class="gc__avatar" aria-hidden="true">🥖</div>
+                <div>
+                  <div class="gc__name">Padaria Pão Quente</div>
+                  <div class="gc__meta"><span class="gc__stars">★★★★★</span> 4,9 · 86 avaliações</div>
+                </div>
+              </div>
+              <p class="gc__status gc__status--ok">Aberto agora · fecha às 19h</p>
+              <div class="gc__actions">
+                <span class="gc__chip">Ligar</span>
+                <span class="gc__chip">Site</span>
+                <span class="gc__chip">WhatsApp</span>
+                <span class="gc__chip">Como chegar</span>
+              </div>
+              <div class="gc__photos" aria-hidden="true">
+                <div class="gc__ph gc__ph--1">🥖</div>
+                <div class="gc__ph gc__ph--2">🎂</div>
+                <div class="gc__ph gc__ph--3">☕</div>
+              </div>
+              <p class="gc__review">“O melhor pão da região — e encomendei o bolo pelo site, super fácil.” <strong>— Mariana, há 2 semanas</strong></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="banner" data-reveal>
+      <div>
+        <h3>Seja um dos primeiros</h3>
+        <p>Quem começa agora recebe atenção total — e condições de primeiro cliente. Este espaço vai contar histórias reais; a próxima pode ser a sua.</p>
+      </div>
+      <a href="#contato" class="btn btn--white">Quero começar</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ FAQ ══════════ -->
+<section class="sec sec--faq" id="duvidas" aria-labelledby="faq-titulo">
+  <div class="wrap faq__grid">
+    <div class="faq__sticky">
+      <span class="eyebrow" data-reveal style="--d:1">{ dúvidas }</span>
+      <h2 class="h2" id="faq-titulo" data-reveal style="--d:2">Perguntas frequentes</h2>
+      <p data-reveal style="--d:3">Ficou alguma dúvida? <a href="#contato">Me chama</a> — respondo tudo antes de qualquer compromisso.</p>
+    </div>
+    <div class="faq__list" data-reveal style="--d:2">
+      <div class="faq__item">
+        <button class="faq__q" type="button" aria-expanded="false">
+          <span>Quanto custa um site?</span><span aria-hidden="true">+</span>
+        </button>
+        <div class="faq__a"><div><p>Depende do tamanho do projeto. Depois da primeira conversa, você recebe uma proposta clara, com valor fechado e sem surpresas no meio do caminho.</p></div></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" type="button" aria-expanded="false">
+          <span>Em quanto tempo fica pronto?</span><span aria-hidden="true">+</span>
+        </button>
+        <div class="faq__a"><div><p>Um site simples costuma ficar pronto em poucas semanas. Antes de começar, a gente combina um prazo — e eu cumpro.</p></div></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" type="button" aria-expanded="false">
+          <span>Preciso entender de tecnologia?</span><span aria-hidden="true">+</span>
+        </button>
+        <div class="faq__a"><div><p>Não. Esse é o meu trabalho. A gente conversa em português claro, sem termos complicados, e eu cuido de toda a parte técnica.</p></div></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" type="button" aria-expanded="false">
+          <span>Vou aparecer no Google?</span><span aria-hidden="true">+</span>
+        </button>
+        <div class="faq__a"><div><p>O site já sai preparado para o Google encontrar. Também te oriento sobre o que fazer para aparecer quando alguém procurar o seu serviço.</p></div></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" type="button" aria-expanded="false">
+          <span>E depois que o site estiver no ar?</span><span aria-hidden="true">+</span>
+        </button>
+        <div class="faq__a"><div><p>Você não fica sozinho. Ofereço acompanhamento de perto para atualizações, ajustes e o que mais o seu negócio precisar.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ CONTATO ══════════ -->
+<section class="sec sec--contato dark" id="contato" aria-labelledby="contato-titulo">
+  <div class="wrap contato__grid">
+    <div>
+      <span class="eyebrow" data-reveal style="--d:1">{ vamos começar }</span>
+      <h2 id="contato-titulo" data-reveal style="--d:2">Bora tirar sua ideia do papel?</h2>
+      <p class="contato__sub" data-reveal style="--d:3">Me chama no WhatsApp ou preenche o formulário. A primeira conversa é sem compromisso — você sai dela com clareza, mesmo que a gente não feche.</p>
+      <div class="contato__btns" data-reveal style="--d:4">
+        <a class="btn" href="https://wa.me/5511992465824?text=Ol%C3%A1%2C%20Enzo!%20Vi%20seu%20site%20e%20quero%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener">WhatsApp</a>
+        <a class="btn btn--ghost" style="color:#fff" href="https://instagram.com/enzochuka" target="_blank" rel="noopener">@enzochuka</a>
+      </div>
+    </div>
+    <div class="form" id="form-card" data-reveal style="--d:3">
+      <form id="contact-form">
+        <div class="form__title">Me conta da sua ideia</div>
+        <label>Seu nome
+          <input type="text" id="f-nome" name="nome" placeholder="Como você se chama?" autocomplete="name">
+        </label>
+        <label>Seu negócio
+          <input type="text" id="f-negocio" name="negocio" placeholder="O que você faz?">
+        </label>
+        <label>Sua ideia
+          <textarea id="f-ideia" name="ideia" rows="4" placeholder="Me conta o que você precisa"></textarea>
+        </label>
+        <button type="submit" class="btn">Enviar mensagem</button>
+      </form>
+      <div class="form__ok" role="status">
+        <h3>Abrindo o WhatsApp…</h3>
+        <p>Abri a conversa já com a sua mensagem — é só tocar em enviar. Se não abrir, me chama no <a href="https://instagram.com/enzochuka" target="_blank" rel="noopener">@enzochuka</a>.</p>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="footer__in">
+      <span>{ ec } — Enzo Chuka</span>
+      <span>Presença digital para pequenos negócios · Brasil</span>
+    </div>
+  </footer>
+  <div class="footer__bar"></div>
+</section>
+
+<script>
+(function () {
+  document.documentElement.classList.add('js');
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // ── Revelação ao rolar (com replay, como no original) ──
+  var els = Array.prototype.slice.call(document.querySelectorAll('[data-reveal]'));
+  if (!reduced && 'IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          e.target.classList.add('is-in');
+        } else if (e.boundingClientRect.top > 0) {
+          // saiu por baixo da tela → re-arma para tocar de novo na volta
+          e.target.classList.remove('is-in');
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+    els.forEach(function (el) { io.observe(el); });
+  } else {
+    els.forEach(function (el) { el.classList.add('is-in'); });
+  }
+
+  // ── Alternador antes/depois ──
+  var stack = document.getElementById('prova-stack');
+  var toggle = document.querySelector('.toggle');
+  var btnBefore = document.getElementById('btn-before');
+  var btnAfter = document.getElementById('btn-after');
+  var before = document.getElementById('gc-before');
+  var after = document.getElementById('gc-after');
+  function setState(state) {
+    var isAfter = state === 'after';
+    stack.setAttribute('data-show', state);
+    toggle.setAttribute('data-state', state);
+    btnBefore.setAttribute('aria-pressed', String(!isAfter));
+    btnAfter.setAttribute('aria-pressed', String(isAfter));
+    before.setAttribute('aria-hidden', String(isAfter));
+    after.setAttribute('aria-hidden', String(!isAfter));
+  }
+  if (stack && btnBefore && btnAfter) {
+    btnBefore.addEventListener('click', function () { setState('before'); });
+    btnAfter.addEventListener('click', function () { setState('after'); });
+  }
+
+  // ── FAQ ──
+  document.querySelectorAll('.faq__item').forEach(function (item) {
+    var q = item.querySelector('.faq__q');
+    q.addEventListener('click', function () {
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq__item.open').forEach(function (o) {
+        o.classList.remove('open');
+        o.querySelector('.faq__q').setAttribute('aria-expanded', 'false');
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        q.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+
+  // ── Formulário → WhatsApp ──
+  var form = document.getElementById('contact-form');
+  if (form) {
+    form.addEventListener('submit', function (ev) {
+      ev.preventDefault();
+      var nome = document.getElementById('f-nome').value.trim();
+      var negocio = document.getElementById('f-negocio').value.trim();
+      var ideia = document.getElementById('f-ideia').value.trim();
+      var msg = 'Olá, Enzo! Vi seu site e quero conversar sobre um projeto.';
+      if (nome) msg += '\n\nMeu nome: ' + nome;
+      if (negocio) msg += '\nMeu negócio: ' + negocio;
+      if (ideia) msg += '\nMinha ideia: ' + ideia;
+      window.open('https://wa.me/5511992465824?text=' + encodeURIComponent(msg), '_blank', 'noopener');
+      document.getElementById('form-card').classList.add('sent');
+    });
+  }
+
+  // ── Vídeo: toca uma vez e congela no último quadro. Ao sair de vista,
+  //    volta ao início e toca de novo na volta — igual às animações do site ──
+  var video = document.querySelector('.hero__vwrap video');
+  if (video && reduced) {
+    video.removeAttribute('autoplay');
+    video.pause();
+  } else if (video && 'IntersectionObserver' in window) {
+    var vio = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          // entrou em vista: se estava parado (ou já terminou), toca do começo
+          if (video.ended) video.currentTime = 0;
+          if (video.paused) {
+            var p = video.play();
+            if (p && p.catch) p.catch(function () {});
+          }
+        } else {
+          // saiu de vista: re-arma para tocar de novo quando voltar
+          video.pause();
+          video.currentTime = 0;
+        }
+      });
+    }, { threshold: 0.2 });
+    vio.observe(video);
+  }
+})();
+</script>
+
+</body>
+</html>
